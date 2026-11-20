@@ -1,0 +1,52 @@
+{
+  "name": "430-project-2",
+  "version": "1.0.0",
+  "description": "Project 2 for class IGME 430",
+  "homepage": "https://github.com/That1Doge/430-project-2#readme",
+  "bugs": {
+    "url": "https://github.com/That1Doge/430-project-2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/That1Doge/430-project-2.git"
+  },
+  "license": "ISC",
+  "author": "Dominic Lucarini",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/app.js",
+    "pretest": "eslint ./server --fix",
+    "test": "echo \"Tests Complete\"",
+    "webpack": "webpack",
+    "webpackWatch": "webpack watch",
+    "nodemon": "nodemon -e js,html,css --watch ./server --watch ./hosted ./server"
+  },
+  "devDependencies": {
+    "@babel/core": "^8.1.2",
+    "@babel/preset-react": "^8.0.1",
+    "@eslint/js": "^10.0.1",
+    "babel-loader": "^10.1.1",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "nodemon": "^3.1.14",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "webpack": "^5.113.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "compression": "^1.8.2",
+    "connect-redis": "^9.0.0",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "express-handlebars": "^8.0.7",
+    "express-session": "^1.19.0",
+    "helmet": "^8.3.0",
+    "mongoose": "^8.24.10",
+    "redis": "^5.12.4",
+    "serve-favicon": "^2.5.1",
+    "underscore": "^1.13.8"
+  }
+}
