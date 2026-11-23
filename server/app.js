@@ -6,6 +6,7 @@ const helmet = require('helmet');
 const session = require('express-session');
 const RedisStore = require('connect-redis').RedisStore;
 const redis = require('redis');
+const router = require('./routes');
 
 const connectDB = require('./db');
 
@@ -61,6 +62,8 @@ app.use(session({
     },
 }))
 
+router(app);
+
 // Main application page
 app.get('/', (req, res) => {
     res.render('index');
@@ -88,7 +91,7 @@ const startServer = async () => {
         });
     } catch (error) {
         console.log(error);
-        return res.status(500).json({ error: 'Something went wrong'})
+        throw error;
     }
 };
 
