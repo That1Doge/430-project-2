@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react';
 
 import Login from './Login';
 import Signup from './Signup';
+import Dashboard from './Dashboard';
 
 const App = () => {
     const [user, setUser] = useState(null);
@@ -55,14 +56,7 @@ const App = () => {
 
   if (user) {
     return (
-      <main className="dashboard-placeholder">
-        <h1>Welcome to QuestLog, {user.username}!</h1>
-        <p>Your gaming journey starts here.</p>
-
-        <button type="button" onClick={handleLogout}>
-          Log Out
-        </button>
-      </main>
+      <Dashboard user={user} onLogout={handleLogout}/>
     );
   }
 
