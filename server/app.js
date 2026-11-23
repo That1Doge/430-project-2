@@ -1,9 +1,11 @@
-
 const path = require('path');
 const express = require('express');
 const { engine } = require('express-handlebars');
 const compression = require('compression');
 const helmet = require('helmet');
+const connectDB = require('./db');
+
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -36,6 +38,12 @@ app.use((req, res) => {
 });
 
 // Start server
-app.listen(port, () => {
-  console.log(`QuestLog server running on port ${port}`);
-});
+const startServer = async () => {
+    await connectDB();
+
+    app.listen(port, () => {
+        console.log(`QuestLog server running on port ${port}`);
+    });
+};
+
+startServer();
