@@ -27,7 +27,7 @@ const createGame = async (req,res) => {
             game,
         });
     } catch (err) {
-        console.log(error);
+        console.log(err);
         return res.status(500).json({
             error: 'Something went wrong creating game',
         });
