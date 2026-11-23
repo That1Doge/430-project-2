@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import '../styles/dashboard.css';
+import Games from './Games';
 
 const Dashboard = ({ user, onLogout }) => {
   const [activePage, setActivePage] = useState('dashboard');
@@ -60,8 +61,18 @@ const Dashboard = ({ user, onLogout }) => {
         )}
 
         {activePage !== 'dashboard' && (
-          <section className="dashboard-content">
-            <p>{pageTitles[activePage]} will be available soon.</p>
+          <Games />
+        )}
+
+        {activePage === 'quests' && (
+          <section className='dashboard-content'>
+            <p>Quests will be available soon.</p>
+          </section>
+        )}
+
+        {activePage === 'achievements' && (
+          <section className='dashboard-content'>
+            <p>Achievements will be available soon.</p>
           </section>
         )}
       </main>
