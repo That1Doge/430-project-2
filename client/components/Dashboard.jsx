@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
+import '../styles/dashboard.css';
 
 const Dashboard = ({ user, onLogout }) => {
   const [activePage, setActivePage] = useState('dashboard');

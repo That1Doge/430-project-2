@@ -1,0 +1,18 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #15171C;
+  color: #F1F1F5;
+}
+
+.logout-link:hover {
+  background: #3A252B;
+  color: #F08080;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
