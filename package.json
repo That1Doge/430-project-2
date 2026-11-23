@@ -20,7 +20,7 @@
     "test": "echo \"Tests Complete\"",
     "webpack": "webpack",
     "webpackWatch": "webpack watch",
-    "nodemon": "nodemon -e js,html,css --watch ./server --watch ./hosted ./server"
+    "nodemon": "nodemon -e js,html,css --watch ./server --watch ./hosted ./server/app.js"
   },
   "devDependencies": {
     "@babel/core": "^8.1.2",
