@@ -69,6 +69,10 @@ const signup = async (req, res) => {
 
         return res.status(201).json({
           message: 'Account created successfully.',
+          user: {
+            _id: newUser._id,
+            username: newUser.username,
+          },
           redirect: '/dashboard',
         });
       });
@@ -140,6 +144,10 @@ const login = async (req, res) => {
 
         return res.status(200).json({
           message: 'Login successful.',
+          user: {
+            _id: user._id,
+            username: user.username,
+          },
           redirect: '/dashboard',
         });
       });
